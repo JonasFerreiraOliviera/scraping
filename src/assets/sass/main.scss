@@ -1,0 +1,44 @@
+body {
+    background-color: rgb(4, 43, 17);
+    color: #FFF;
+}
+
+main {
+    .list-images {
+        flex-wrap: wrap;
+        padding: 0;
+        li {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            img {
+                width: 100px;
+                height: 100px;
+                object-fit: contain;
+                display: block;
+            }
+
+            p {
+                font-size: .75rem;
+                color: #FFF;
+                text-align: center;
+            }
+        }
+    }
+
+    .number-links, .number-links-loaded {
+        height: 5rem;
+        width: 5rem;
+        display: flex;
+        border: 2px solid #004;
+        border-radius: 50%;
+        align-items: center;
+        justify-content: center;
+        p {
+            margin-bottom: 0;
+        }
+    }
+}

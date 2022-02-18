@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Bootstrap CSS -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+	<link rel="stylesheet" href="../assets/css/main.min.css">
+
+	<title>Web scrapping | BETA</title>
+</head>
+
+<body>
+	<main class="container">
+
+		<div class="row g-2 mt-3">
+			<div class="col-4">
+				<select class="form-select" id="tag_select" aria-label="Default select example">
+					<option selected>Select the type of tag</option>
+					<option value="img">Images</option>
+					<option value="a">Links</option>
+					<option value="h1">Main Title</option>
+					<option value="h2">Titles</option>
+				</select>
+			</div>
+
+			<div class="col-6">
+				<label for="site" class="visually-hidden">Site</label>
+				<input type="text" class="form-control" id="site" placeholder="Site">
+			</div>
+			<div class="col-2">
+				<button type="submit" class="btn btn-dark mb-3">Crawler</button>
+			</div>
+		</div>
+
+		<div class="d-flex">
+			<div class="number-links me-3">
+				<p>0</p>
+			</div>
+
+			<div class="number-links-loaded">
+				<p>0</p>
+			</div>
+		</div>
+
+		<ul class="nav nav-tabs mt-5" id="myTab" role="tablist">
+			<li class="nav-item" role="presentation">
+				<a class="nav-link active" id="home-tab" data-bs-toggle="tab" href="#home" role="tab"
+					aria-controls="home" aria-selected="true">Images</a>
+			</li>
+
+			<li class="nav-item" role="presentation">
+				<a class="nav-link" id="profile-tab" data-bs-toggle="tab" href="#mainTitle" role="tab"
+					aria-controls="profile" aria-selected="false">Main title</a>
+			</li>
+
+			<li class="nav-item" role="presentation">
+				<a class="nav-link" id="contact-tab" data-bs-toggle="tab" href="#links" role="tab"
+					aria-controls="contact" aria-selected="false">Links</a>
+			</li>
+		</ul>
+
+		<div class="tab-content" id="myTabContent">
+			<div class="tab-pane fade" id="mainTitle" role="tabpanel" aria-labelledby="profile-tab">
+				<ul class="list-main-title"></ul>
+			</div>
+
+			<div class="tab-pane fade show active py-4 px-2" id="home" role="tabpanel" aria-labelledby="home-tab">
+				<ul class="d-flex row list-images"></ul>
+			</div>
+
+			<div class="tab-pane fade" id="links" role="tabpanel" aria-labelledby="contact-tab">
+				<ul class="list-links"></ul>
+			</div>
+		</div>
+	</main>
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="../assets/js/main.js" type="module"></script>
+</body>
+
+</html>
